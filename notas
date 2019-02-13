@@ -1,0 +1,5 @@
+COn el comando "GIT INIT" en bash creo el package.json
+cuando unstalo un paquete tengo que poner --save al final para que guarde 
+la información del paquete en el package.json
+Cuando instalamos un paquete que no es para la aplicación sino para ejecutarse
+desde el comando, se debe usar el flag -g para que sea global

@@ -6,6 +6,3 @@ acceder al código que tiene el primero
     Con ES6 se puede exportar así "export const age = 25;"
 
 */
-module.exports.add = (a, b) => {
-    return a + b;
-};
