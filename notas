@@ -3,3 +3,36 @@ cuando unstalo un paquete tengo que poner --save al final para que guarde
 la información del paquete en el package.json
 Cuando instalamos un paquete que no es para la aplicación sino para ejecutarse
 desde el comando, se debe usar el flag -g para que sea global
+
+
+Cuando ejecuto "node app.js" para empezar mi aplicación puedo pasar otros 
+argumentos y de esa forma en mi aplicación según qué argumento pasé puedo hacer
+que realice cierta acción
+
+Para que el argumento que yo paso sirva tengo que tomarlo desde la aplicación y
+usarlo. Estos argumentos se guardan en el json process.argv que es un array 
+
+Instalamos yargs para que parsear en la consola de comandos sea más fácil y legible
+al momento de pasar argumentos que necesito generen un formato pares name-value
+guardado en un json
+
+        {Se puede específicar la versión que se quiere instalar de un paquete
+        usando nombre@x.x.x nombre arroba número de versión ej: pac@4.0.0}
+
+Una vez instalado yargs podemos pasar argumentos de modo que los guarde con formato
+json y sea más fácil utilizarlos. Para esto necesitamos declarar la variable
+    const argv = yargs.argv;
+
+yargs.argv es donde la librería de yargs guarda su versión de los argumentos con 
+los que nuestra aplicación funciona.
+Visualización de process y con yargs:
+            Process:  [ 'D:\\NodeJs\\node.exe',
+                'D:\\WebDev\\NodeJs\\completeNodeJsDevCourse\\app.js',
+                'add',
+                '--title=secret',
+                '--body=This is my secret' ]
+            Yargs:  { _: [ 'add' ],
+                title: 'secret',
+                body: 'This is my secret',
+                '$0': 'app.js' }
+ 
